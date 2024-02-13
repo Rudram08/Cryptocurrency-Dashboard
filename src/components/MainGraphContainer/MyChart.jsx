@@ -89,7 +89,7 @@ export const MyChart = () => {
           }}
         />
       )}
-      {selectedChart === "Line-Chrat" && (
+      {selectedChart === "Line-Chart" && (
         <Line
           data={{
             labels: data.map((coin) => {

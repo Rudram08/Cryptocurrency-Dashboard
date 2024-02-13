@@ -9,7 +9,7 @@ const CoinExchange = () => {
   const [isSellOpen, setIsSellOpen] = useState(false);
   const [isBuyOpen, setIsBuyOpen] = useState(false);
   const [targetedCurrencies, setTargetedCurrencies] = useState([]);
-  const BuyCurrencies = ["Bitcoin"];
+  // const BuyCurrencies = ["Bitcoin"];
   const [sellAmount, setSellAmount] = useState(null);
   const [buyAmount, setBuyAmount] = useState(0);
   const [sellDetails, setSellDetails] = useState({});
@@ -155,16 +155,20 @@ const CoinExchange = () => {
                 </div>
 
                 {isBuyOpen && (
-                  <div className="max-sm:w-[90px] w-[145px] h-[40px] absolute max-sm:top-6 top-9 right-0 z-10 mt-4 origin-top-right rounded-md border border-gray-100 bg-white shadow-lg">
+                  <div className="max-sm:h-[95px] max-sm:w-[90px] w-[145px] h-[140px] absolute max-sm:top-6 top-9 right-0 z-10 mt-4 origin-top-right rounded-md border border-gray-100 bg-white shadow-lg overflow-y-scroll">
                     <div>
-                      {BuyCurrencies.map((currency, i) => {
+                      {Object.keys(targetedCurrencies).map((currency, i) => {
                         return (
                           <div
                             key={i}
-                            onClick={() => selectBuyCurrency(currency)}
+                            onClick={() => {
+                              selectBuyCurrency(
+                                targetedCurrencies[currency]["name"]
+                              );
+                            }}
                             className="block rounded-lg px-4 py-2 max-sm:text-xs text-base text-gray-600 no-underline hover:bg-gray-100 cursor-pointer"
                           >
-                            {currency}
+                            {targetedCurrencies[currency]["name"]}
                           </div>
                         );
                       })}

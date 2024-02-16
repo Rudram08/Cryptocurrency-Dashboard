@@ -26,7 +26,7 @@ export const Footer = () => {
             Copyright © Rudram aj Chakraborty - All rights reserved{" "}
           </a>
         </h3>
-        <br />
+        {/* <br /> */}
       </div>
       <div className="flex absolute -mt-3 items-center">
         <h3 className="mx-2 text-[12px] text-black-400 underline hover:underline hover:text-red-900">

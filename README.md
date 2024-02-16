@@ -1,6 +1,6 @@
 # Crypto-Dashboard
 
-![AB Project - Crypto](https://github.com/Rudram08/Cryptocurrency-Dashboard/assets/139102569/f909c3f3-059f-4bd5-877a-d31ede2c447d)
+<!-- ![AB Project - Crypto](https://github.com/Rudram08/Cryptocurrency-Dashboard/assets/139102569/f909c3f3-059f-4bd5-877a-d31ede2c447d) -->
 
 ## 1. Introduction
 

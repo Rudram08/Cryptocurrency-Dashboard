@@ -8,12 +8,10 @@ const SearchBox = () => {
   const [searchCurrency, setSearchCurrency] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [searchValues, setSearchValue] = useState([]);
-  // dispatch to update the states of react-redux
+
   const dispatch = useDispatch();
 
-  // useEffect hook to render the function on each render
   useEffect(() => {
-    // async function to get the crypto currencies from api
     const HandelContent = async () => {
       try {
         const { data } = await axios.get(
@@ -25,22 +23,17 @@ const SearchBox = () => {
       }
     };
 
-    // calling the function
     HandelContent();
   }, [dispatch]);
 
-  // useEffect hook to render the function on each changes of the given dependency
   useEffect(() => {
-    // function to check the data of search box
     function checkSearchDetails() {
-      // edge case
       if (searchCurrency.length === 0) {
         setIsOpen(false);
         setSearchValue([]);
         return;
       }
 
-      // itterationg over the crypto currencies to filter out the searched one
       content.map((currency) => {
         if (
           currency.name.toLowerCase().startsWith(searchCurrency.toLowerCase())
@@ -51,7 +44,6 @@ const SearchBox = () => {
       });
     }
 
-    // calling the function
     checkSearchDetails();
   }, [searchCurrency, content]);
 
@@ -103,5 +95,4 @@ const SearchBox = () => {
   );
 };
 
-// Default Export
 export default SearchBox;

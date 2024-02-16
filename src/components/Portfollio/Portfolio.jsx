@@ -25,13 +25,10 @@ const Portfolio = () => {
       }
     };
 
-    // calling the function
     Top3CryptoCurrenciesSelector();
   }, [selectedCurrency, dispatch]);
 
-  // useEffect hook to render the function on each changes of the given dependency
   useEffect(() => {
-    // function to calculate the total price of all selected cryptocurrencies
     const TotalValue = () => {
       let val = 0;
       topCryptos.map((crypto) => {
@@ -40,7 +37,6 @@ const Portfolio = () => {
       setTotalVal(val);
     };
 
-    // calling the function
     TotalValue();
   }, [topCryptos]);
 
@@ -89,5 +85,4 @@ const Portfolio = () => {
   );
 };
 
-// Default Export
 export default Portfolio;

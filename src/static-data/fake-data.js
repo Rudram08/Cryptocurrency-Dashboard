@@ -1,13 +1,7 @@
-// currencies of different countries
 export const myCurrencies = ["USD", "INR", "EUR"];
 
-// Chart Types
 export const ChatType = ["Bar-Chart", "Line-Chart"];
 
-// This Data Will Be displayed Only When The USER Turns off his/her Internet Connection.
-// If Internet Error Comes It will display Offline Data.
-// For Better User Experience.
-// Otherwise Blank Screen may Impact an Boringness to the user.
 export const OfflineData = [
   {
     id: "bitcoin",
